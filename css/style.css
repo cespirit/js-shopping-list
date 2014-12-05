@@ -91,28 +91,29 @@ h1 {
 	border-bottom: 1px dotted black;
 }
 
-.list .fa-square-o,
-.list .fa-check-square-o {
-	margin-right: 1rem;
-}
-
+.list .checked,
+.list .unchecked,
 .list .delete {
 	padding: 0;
 	border: none;
-	background: transparent;
-	float: right;
-	font-size: 1.10rem;
 }
 
-.list .fa-times {	
+.list .checked,
+.list .unchecked {
+	margin-right: 1rem;
+	background: transparent;
+}
+
+.list .delete {
+	float: right;
+	font-size: 1.10rem;
 	background-color: #950000;
 	color: white;
 	padding: 0 0.15rem;
 	border-radius: 0.25rem;	
 }
 
-.list .delete:hover .fa-times {
-	box-shadow: none;
+.list .delete:hover {
 	background-color: #e50000;
 }
 
@@ -135,7 +136,13 @@ h1 {
 		padding-right: 0.5rem;
 	}
 
-	.list .items-list > li {
+	.list .items-list > li,
+	.list .delete {
 		font-size: 1rem;
 	}
+
+	.list .delete {
+		padding: 0 0.1rem;
+	}
+	
 }
