@@ -1,0 +1,141 @@
+body {
+	background-color: #f2f2f2;
+	background-image: url(../images/page-top-border.jpg);
+	background-repeat: repeat-x;	
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;	
+}
+ 
+.container {
+	background-color: white;
+	padding-bottom: 1rem;
+	margin: 4.75rem auto 0 auto;		
+	border-radius: 1rem;
+	box-shadow: 5px 5px 5px gray;
+	max-width: 32rem;
+	min-height: 25rem;	
+}
+
+h1, .add-button {
+	font-family: 'Roboto Slab', serif;
+}
+
+h1 {	
+	background-color: #6f1ea1;
+	color: white;
+	font-weight: 700;
+	font-size: 3rem;
+	text-align: center;
+	text-shadow: 2px 2px black;	
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0.10rem;	
+	border-radius: 1rem 1rem 0 0;
+}
+
+.fa-shopping-cart {
+	background-color: white;
+	color: #6f1ea1;
+	font-size: 2.75rem;	
+	padding: 0.5rem 0.6rem;
+	border-radius: 100%;	
+}
+
+/* Input new item section */
+.add-item {
+	background-color: #ea2bd3;
+	text-align: center;	
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.add-item #new-item, 
+.add-item .add {
+	padding: 0.5rem 0.5rem;
+	border: none;
+	border-radius: 0.2rem;		
+}
+
+.add-item #new-item {
+	width: 50%;
+}
+
+.add-item .add {
+	background: white;
+	font-weight: 700;
+	margin-left: 0.5rem;	
+	box-shadow: 2px 2px 1px #6f1ea1;
+}
+
+.add-item .add:hover {
+	background-color: #6f1ea1;
+	color: white;
+	box-shadow: none;
+}
+
+/* List section */
+.list .items-list {
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 0.10rem;
+	margin-bottom: 0.30rem;
+}
+
+.list .items-list > li {
+	font-size: 1.25rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	padding-left: 1rem;
+	padding-right: 1rem;	
+	background-color: #d3bbe2;
+	border-bottom: 1px dotted black;
+}
+
+.list .fa-square-o,
+.list .fa-check-square-o {
+	margin-right: 1rem;
+}
+
+.list .delete {
+	padding: 0;
+	border: none;
+	background: transparent;
+	float: right;
+	font-size: 1.10rem;
+}
+
+.list .fa-times {	
+	background-color: #950000;
+	color: white;
+	padding: 0 0.15rem;
+	border-radius: 0.25rem;	
+}
+
+.list .delete:hover .fa-times {
+	box-shadow: none;
+	background-color: #e50000;
+}
+
+@media only screen and (max-width: 575px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.fa-shopping-cart {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	h1 {
+		font-size: 2rem;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	.list .items-list > li {
+		font-size: 1rem;
+	}
+}
