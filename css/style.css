@@ -8,7 +8,7 @@ body {
  
 .container {
 	background-color: white;
-	padding-bottom: 1rem;
+	padding-bottom: 0.5rem;
 	margin: 4.75rem auto 0 auto;		
 	border-radius: 1rem;
 	box-shadow: 5px 5px 5px gray;
@@ -82,14 +82,42 @@ input[type="checkbox"] {
 }
 
 /* List section */
-.list #items-list {
+.lists .checked,
+.lists .unchecked,
+.lists .delete {
+	padding: 0;
+	border: none;
+}
+
+.lists .checked,
+.lists .unchecked {
+	margin-right: 1rem;
+	background: transparent;
+}
+
+.lists .delete {
+	float: right;
+	font-size: 1.10rem;
+	background-color: #950000;
+	color: white;
+	padding: 0 0.15rem;
+	border-radius: 0.25rem;	
+}
+
+.lists .delete:hover {
+	background-color: #e50000;
+}
+
+.lists #items-list,
+.lists #completed-list {
 	list-style-type: none;
 	padding-left: 0;
 	margin-top: 0.10rem;
-	margin-bottom: 0.30rem;
+	margin-bottom: 0;	
 }
 
-.list #items-list > li {
+.lists #items-list > li,
+.lists #completed-list > li {
 	font-size: 1.25rem;
 	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
@@ -101,30 +129,8 @@ input[type="checkbox"] {
 	overflow-wrap: break-word;
 }
 
-.list .checked,
-.list .unchecked,
-.list .delete {
-	padding: 0;
-	border: none;
-}
-
-.list .checked,
-.list .unchecked {
-	margin-right: 1rem;
-	background: transparent;
-}
-
-.list .delete {
-	float: right;
-	font-size: 1.10rem;
-	background-color: #950000;
-	color: white;
-	padding: 0 0.15rem;
-	border-radius: 0.25rem;	
-}
-
-.list .delete:hover {
-	background-color: #e50000;
+.lists #completed-list {
+	margin-bottom: 0.25rem;
 }
 
 @media only screen and (max-width: 575px) {
@@ -151,14 +157,14 @@ input[type="checkbox"] {
 		height: 1.10rem;
 	}
 
-	.list #items-list > li,
-	.list .delete,
+	.lists #items-list > li,
+	.lists #completed-list > li,
+	.lists .delete,
 	 {
 		font-size: 1rem;
 	}
 
-	.list .delete {
+	.lists .delete {
 		padding: 0 0.1rem;
 	}
 
-}
