@@ -16,6 +16,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body>
 	<div class="container">
@@ -24,27 +25,27 @@
 			Shopping List
 		</h1>
 		<section class="add-item">
-			<input id="new-item" type="text" placeholder="Type in item" autofocus="autofocus">
+			<input id="new-item" type="text" placeholder="Type in an item" autofocus="autofocus">
 			<button class="add">Add</button>
 		</section>
 
 		<section class="list">
-			<ul class="items-list">
+			<ul id="items-list">
 				
-				<li><button class="unchecked fa fa-square-o"></button><button class="delete fa fa-times"></button>Milk Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+				<li class="item"><input type="checkbox"><button class="delete fa fa-times"></button>Milk Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
 
-				<li><button class="unchecked fa fa-square-o"></button><button class="delete fa fa-times"></button>Chicken</li>
-
-				<li><button class="unchecked fa fa-square-o"></button><button class="delete fa fa-times"></button>Rice
-				</li>
-
-				<li><button class="checked fa fa-check-square-o"></button><button class="delete fa fa-times"></button>Cabbage</li>
+				<li class="item"><input type="checkbox"><button class="delete fa fa-times"></button>Chicken</li>
 				
-				<li><button class="checked fa fa-check-square-o"></button><button class="delete fa fa-times"></button>3 Apples</li>
+				<li class="item"><input type="checkbox"><button class="delete fa fa-times"></button>Rice</li>
+
+				<li class="item"><input type="checkbox"><button class="delete fa fa-times"></button>Cabbage</li>
+				
+				<li class="item"><input type="checkbox"><button class="delete fa fa-times"></button>3 Apples</li>
 				 
 			</ul>
 		</section>
 	</div>
 </body>
 </html>
+
 

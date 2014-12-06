@@ -41,6 +41,14 @@ h1 {
 	border-radius: 100%;	
 }
 
+input[type="checkbox"] {
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-right: 1rem;
+	vertical-align: middle;
+}
+
+
 /* Input new item section */
 .add-item {
 	background-color: #ea2bd3;
@@ -74,14 +82,14 @@ h1 {
 }
 
 /* List section */
-.list .items-list {
+.list #items-list {
 	list-style-type: none;
 	padding-left: 0;
 	margin-top: 0.10rem;
 	margin-bottom: 0.30rem;
 }
 
-.list .items-list > li {
+.list #items-list > li {
 	font-size: 1.25rem;
 	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
@@ -89,6 +97,8 @@ h1 {
 	padding-right: 1rem;	
 	background-color: #d3bbe2;
 	border-bottom: 1px dotted black;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .list .checked,
@@ -136,13 +146,19 @@ h1 {
 		padding-right: 0.5rem;
 	}
 
-	.list .items-list > li,
-	.list .delete {
+	input[type="checkbox"] {
+		width: 1.10rem;
+		height: 1.10rem;
+	}
+
+	.list #items-list > li,
+	.list .delete,
+	 {
 		font-size: 1rem;
 	}
 
 	.list .delete {
 		padding: 0 0.1rem;
 	}
-	
+
 }
