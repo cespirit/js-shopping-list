@@ -1,5 +1,5 @@
 body {
-	background-color: #f2f2f2;
+	background-color: #dedede;
 	background-image: url(../images/page-top-border.jpg);
 	background-repeat: repeat-x;	
 	font-family: 'Roboto', sans-serif;
@@ -7,7 +7,7 @@ body {
 }
  
 .container {
-	background-color: white;
+	background-color: #f2f2f2;
 	padding-bottom: 0.5rem;
 	margin: 4.75rem auto 0 auto;		
 	border-radius: 1rem;

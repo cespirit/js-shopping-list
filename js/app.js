@@ -14,6 +14,8 @@
  		$("#items-list").append($newItem);
  	});
 
-
+ 	$(".lists").on("click", ".delete", function(){
+ 		$(this).closest(".item").remove();
+ 	});
 
  });
