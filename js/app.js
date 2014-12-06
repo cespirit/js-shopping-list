@@ -14,11 +14,10 @@
  		var $item = $(this).closest(".item");
  		
  		if( $(this).prop("checked") ) {
- 			$item.css({"text-decoration":"line-through", 
- 				       "background-color":"#d8d8d8"});
+ 			$item.addClass("checked");
  			$("#completed-list").append( $item ); 			
  		} else {
- 			$item.css({"text-decoration":"none", "background-color":""});
+ 			$item.removeClass("checked");
  			$("#items-list").append( $item ); 
  		}
  	});
@@ -42,4 +41,5 @@ function addItem() {
 		            '<button class="delete fa fa-times"></button>' 
 		            + $item + "</li>");
 	$("#items-list").append($newItem);
+	$("#new-item").val("");
 }
