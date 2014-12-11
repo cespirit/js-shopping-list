@@ -16,7 +16,7 @@
 
  });
 
-function addItem() {
+function addItem(event) {
 	event.preventDefault()
 	var $item = $("#new-item").val();
 	$item = $.trim($item); 
