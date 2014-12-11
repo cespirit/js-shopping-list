@@ -1,25 +1,12 @@
  $(document).ready(function(){
 
- 	/* Add item to list*/
- 	$(".add-item").on("click", ".add",  addItem);
-
- 	$("#new-item").on('keyup', function(e){
- 		if(e.keyCode === 13){
- 			addItem();
- 		}
- 	});
+ 	/* Add item to not completed list */
+ 	$("#add-form").submit(event, addItem);
 
  	/* Move items between completed and not completed list */
  	$(".lists").on("click", "input[type='checkbox']", function(){
  		var $item = $(this).closest(".item");
- 		
- 		if( $(this).prop("checked") ) {
- 			$item.addClass("checked");
- 			$("#completed-list").append( $item ); 			
- 		} else {
- 			$item.removeClass("checked");
- 			$("#items-list").append( $item ); 
- 		}
+ 		toggleComplete($(this).prop("checked"), $item);
  	});
 
  	/* Delete item from list */
@@ -30,6 +17,7 @@
  });
 
 function addItem() {
+	event.preventDefault()
 	var $item = $("#new-item").val();
 	$item = $.trim($item); 
 	if($item === "") {
@@ -42,4 +30,14 @@ function addItem() {
 		            + $item + "</li>");
 	$("#items-list").append($newItem);
 	$("#new-item").val("");
+}
+
+function toggleComplete(gotChecked, $item) {
+	if(gotChecked) {
+		$item.addClass("checked");
+		$("#completed-list").append( $item ); 			
+	} else {
+		$item.removeClass("checked");
+		$("#items-list").append( $item ); 
+	}	
 }
