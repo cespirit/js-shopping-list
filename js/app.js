@@ -1,7 +1,7 @@
  $(document).ready(function(){
 
  	/* Add item to not completed list */
- 	$("#add-form").submit(event, addItem);
+ 	$("#add-form").submit(addItem);
 
  	/* Move items between completed and not completed list */
  	$(".lists").on("click", "input[type='checkbox']", function(){
