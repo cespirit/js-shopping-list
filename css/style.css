@@ -16,6 +16,10 @@ body {
 	min-height: 25rem;	
 }
 
+.hidden {
+	display: none;
+}
+
 h1, .add-button {
 	font-family: 'Roboto Slab', serif;
 }
@@ -95,6 +99,11 @@ input[type="checkbox"] {
 
 .lists .delete:hover {
 	background-color: #e50000;
+}
+
+.lists .item-text, 
+.lists .edit-form {
+	display: inline;	
 }
 
 .lists #items-list,
